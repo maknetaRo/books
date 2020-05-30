@@ -19,9 +19,9 @@ def books_sorted(books):
             ):
 
                 for j in range(1, len(books[i])):
-                    if alphabet.index(books[i].lower()[j]) > alphabet.index(
-                        books[i + 1].lower()[j]
-                    ):
+                    if alphabet.index(
+                        books[i].replace(" ", "").lower()[j]
+                    ) > alphabet.index(books[i + 1].replace(" ", "").lower()[j]):
                         sorted = False
                         books[i], books[i + 1] = books[i + 1], books[i]
                         sorted = True
